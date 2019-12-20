@@ -1,0 +1,38 @@
+bpftrace (0.9.3-1ubuntu1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Changcheng Liu <changcheng.liu@aliyun.com>  Fri, 20 Dec 2019 11:29:09 +0800
+
+bpftrace (0.9.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Vincent Bernat <bernat@debian.org>  Thu, 01 Aug 2019 09:06:56 +0200
+
+bpftrace (0.9.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Vincent Bernat <bernat@debian.org>  Wed, 26 Jun 2019 08:31:30 +0200
+
+bpftrace (0.9-1) unstable; urgency=medium
+
+  * New upstream release.
+  * d/patches: drop all patches, applied upstream.
+
+ -- Vincent Bernat <bernat@debian.org>  Sat, 16 Mar 2019 19:07:56 +0100
+
+bpftrace (0.8+git60-gccac69c2239b-2) unstable; urgency=medium
+
+  * d/patches: add patch to avoid optimizing away BEGIN/END trigger
+    functions.
+  * d/patches: add patch to correctly detect kernel headers.
+
+ -- Vincent Bernat <bernat@debian.org>  Fri, 22 Feb 2019 06:10:27 -0800
+
+bpftrace (0.8+git60-gccac69c2239b-1) unstable; urgency=medium
+
+  * Initial import. Closes: #918120.
+
+ -- Vincent Bernat <bernat@debian.org>  Sun, 03 Feb 2019 12:53:21 +0100

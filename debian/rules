@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DBUILD_TESTING:BOOL=OFF
+
+override_dh_auto_install:
+	dh_auto_install
+	rm -rf debian/bpftrace/usr/share/bpftrace/tools/doc
+
+	# Move binaries to /usr/sbin
+	mkdir -p debian/bpftrace/usr/sbin
+	mv debian/bpftrace/usr/share/bpftrace/tools/*.bt debian/bpftrace/usr/sbin
+
+	# Fix manual pages to add the .bt suffix
+	for eachMan in debian/bpftrace/usr/man/man8/*; do \
+	    mv $$eachMan `echo $$eachMan | sed 's+\.8+.bt.8+'`; \
+	done
+	mv debian/bpftrace/usr/man debian/bpftrace/usr/share/.
